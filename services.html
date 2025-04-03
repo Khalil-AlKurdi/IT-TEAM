@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>خدماتنا - شركة النسر للصرافة</title>
+    <link rel="stylesheet" href="css/styleservices.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>شركة النسر للصرافة</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="services.html">خدماتنا</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+            <li><a href="login.html">تسجيل الدخول</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="floating-elements" id="floatingElements"></div>
+
+      <section class="services-section">
+        <h2>خدماتنا المتميزة</h2>
+        <p class="subtitle">
+          نقدم حلولاً مالية متكاملة تلبي جميع احتياجاتك بأسعار تنافسية وأعلى
+          معايير الأمان
+        </p>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-exchange-alt"></i></div>
+            <div class="service-content">
+              <h3>تحويل العملات</h3>
+              <p>
+                خدمة تحويل عملات فورية بأفضل الأسعار مع ضمان السرعة والأمان في
+                كل معاملة. نقدم تغطية لأكثر من 50 عملة عالمية مع تحديث لحظي
+                للأسعار.
+              </p>
+              <a href="#" class="service-link">
+                اكتشف المزيد
+                <i class="fas fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <div class="service-content">
+              <h3>الحوالات المالية</h3>
+              <p>
+                إرسال واستقبال الأموال محلياً ودولياً بسرعة قياسية ورسوم
+                تنافسية. نغطي أكثر من 100 وجهة حول العالم مع متابعة مباشرة
+                للحوالة.
+              </p>
+              <a href="#" class="service-link">
+                اكتشف المزيد
+                <i class="fas fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="service-content">
+              <h3>أسعار الصرف</h3>
+              <p>
+                تحديثات لحظية لأسعار الصرف مع تحليلات السوق. نوفر أدوات متقدمة
+                لمتابعة وتحليل تحركات العملات وتنبؤات الأسعار.
+              </p>
+              <a href="#" class="service-link">
+                اكتشف المزيد
+                <i class="fas fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+            <div class="service-content">
+              <h3>استشارات مالية</h3>
+              <p>
+                فريق من الخبراء الماليين لتقديم حلول مالية مخصصة تساعدك في اتخاذ
+                أفضل القرارات الاستثمارية وإدارة محفظتك المالية.
+              </p>
+              <a href="#" class="service-link">
+                اكتشف المزيد
+                <i class="fas fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+            <div class="service-content">
+              <h3>حلول تمويلية</h3>
+              <p>
+                حلول شاملة للشركات تشمل التمويل التجاري، إدارة السيولة، وتحويلات
+                الأعمال الدولية بأسعار مميزة ومرونة في السداد.
+              </p>
+              <a href="#" class="service-link">
+                اكتشف المزيد
+                <i class="fas fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-lock"></i></div>
+            <div class="service-content">
+              <h3>خدمات آمنة</h3>
+              <p>
+                أعلى معايير الأمان والحماية باستخدام أحدث التقنيات المشفرة لضمان
+                سلامة كل معاملة مالية تقوم بها مع تأمين كامل ضد المخاطر.
+              </p>
+              <a href="#" class="service-link">
+                اكتشف المزيد
+                <i class="fas fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 شركة النسر للصرافة - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script>
+      // إنشاء عناصر عائمة ديناميكية
+      document.addEventListener("DOMContentLoaded", function () {
+        const floatingElements = document.getElementById("floatingElements");
+        const icons = [
+          "💱",
+          "💰",
+          "💲",
+          "💵",
+          "💴",
+          "💶",
+          "💷",
+          "🏦",
+          "📊",
+          "📈",
+        ];
+
+        for (let i = 0; i < 12; i++) {
+          const element = document.createElement("div");
+          element.className = "floating-element";
+          element.textContent = icons[Math.floor(Math.random() * icons.length)];
+          element.style.top = `${Math.random() * 100}%`;
+          element.style.left = `${Math.random() * 100}%`;
+          element.style.fontSize = `${Math.random() * 2 + 1.5}rem`;
+          element.style.animationDuration = `${Math.random() * 15 + 10}s`;
+          element.style.animationDelay = `${Math.random() * 5}s`;
+          floatingElements.appendChild(element);
+        }
+      });
+    </script>
+  </body>
+</html>

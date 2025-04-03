@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اتصل بنا - شركة النسر للصرافة</title>
+    <link rel="stylesheet" href="css/styleConcat.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="header-content">
+          <h1>شركة النسر للصرافة</h1>
+          <nav>
+            <ul>
+              <li><a href="index.html">الرئيسية</a></li>
+              <li><a href="services.html">خدماتنا</a></li>
+              <li><a href="contact.html">اتصل بنا</a></li>
+              <li><a href="login.html">تسجيل الدخول</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="floating-coins" id="floatingCoins"></div>
+
+      <div class="contact-container">
+        <div class="contact-header">
+          <h2>اتصل بنا</h2>
+          <p>
+            نحن هنا لمساعدتك في أي استفسار أو خدمة تحتاجها. فريقنا متاح على مدار
+            الساعة لتقديم أفضل خدمة لعملائنا الكرام.
+          </p>
+          <div class="management-info">
+            <h3>إدارة السيد: خليل الكردي</h3>
+            <p>مدير عام شركة النسر للصرافة</p>
+          </div>
+        </div>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>العنوان</h3>
+            <p>شارع النسر، حلب، سوريا</p>
+            <a href="#" class="contact-link">
+              عرض على الخريطة
+              <i class="fas fa-arrow-left"></i>
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3>الهاتف</h3>
+            <p>0999-123456<br />021-1234567</p>
+            <a href="tel:+963999123456" class="contact-link">
+              اتصل الآن
+              <i class="fas fa-arrow-left"></i>
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>البريد الإلكتروني</h3>
+            <p>info@alnasr-exchange.com<br />support@alnasr-exchange.com</p>
+            <a href="mailto:info@alnasr-exchange.com" class="contact-link">
+              أرسل رسالة
+              <i class="fas fa-arrow-left"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <div class="form-title">
+            <h3>أرسل لنا رسالة</h3>
+            <p>سنكون سعداء بالرد على استفساراتك في أقرب وقت ممكن</p>
+          </div>
+
+          <form id="contactForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">الاسم الكامل</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">رقم الهاتف</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">الموضوع</label>
+                <select id="subject" name="subject" required>
+                  <option value="">اختر موضوع الرسالة</option>
+                  <option value="استفسار">استفسار</option>
+                  <option value="شكوى">شكوى</option>
+                  <option value="مقترح">مقترح</option>
+                  <option value="آخرى">آخرى</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="message">الرسالة</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">إرسال الرسالة</button>
+          </form>
+
+          <div class="success-message" id="successMessage">
+            <i class="fas fa-check-circle"></i>
+            <h3>شكراً لتواصلك معنا!</h3>
+            <p>
+              لقد تم استلام رسالتك بنجاح وسنقوم بالرد عليك في أقرب وقت ممكن.
+            </p>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <h3>موقعنا في مدينة حلب</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20890.215458099!2d36.2015837!3d36.2021057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1525c3a5c0f72681%3A0x8a7d5a7d5a7d5a7d!2sAleppo%2C%20Syria!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+          <div class="management-signature">
+            <p>خليل الكردي</p>
+            <p>مدير عام</p>
+            <p>شركة النسر للصرافة</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 شركة النسر للصرافة - جميع الحقوق محفوظة</p>
+      <p class="management-footer">الإدارة العامة: السيد خليل الكردي</p>
+    </footer>
+
+    <script>
+      // إنشاء عملات عائمة ديناميكية
+      document.addEventListener("DOMContentLoaded", function () {
+        const floatingCoins = document.getElementById("floatingCoins");
+        const colors = ["#D4AF37", "#C0C0C0", "#B9B9B9", "#FFD700"];
+
+        for (let i = 0; i < 15; i++) {
+          const coin = document.createElement("div");
+          coin.className = "coin";
+          const size = Math.random() * 30 + 10;
+          coin.style.width = `${size}px`;
+          coin.style.height = `${size}px`;
+          coin.style.top = `${Math.random() * 100}%`;
+          coin.style.left = `${Math.random() * 100}%`;
+          coin.style.background = `linear-gradient(135deg, ${
+            colors[Math.floor(Math.random() * colors.length)]
+          }, ${colors[Math.floor(Math.random() * colors.length)]})`;
+          coin.style.animationDuration = `${Math.random() * 15 + 10}s`;
+          coin.style.animationDelay = `${Math.random() * 5}s`;
+          floatingCoins.appendChild(coin);
+        }
+
+        // معالجة إرسال النموذج
+        document
+          .getElementById("contactForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // إخفاء النموذج وإظهار رسالة النجاح
+            this.style.display = "none";
+            document.getElementById("successMessage").style.display = "block";
+
+            // إعادة تعيين النموذج بعد 5 ثواني
+            setTimeout(() => {
+              this.reset();
+              this.style.display = "block";
+              document.getElementById("successMessage").style.display = "none";
+            }, 5000);
+          });
+      });
+    </script>
+
+    <style></style>
+  </body>
+</html>
