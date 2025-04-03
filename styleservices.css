@@ -1,0 +1,506 @@
+:root {
+    --primary-dark: rgb(9, 38, 53);
+    --primary-medium: rgb(27, 66, 66);
+    --primary-light: rgb(92, 131, 116);
+    --accent-color: rgb(158, 200, 185);
+    --gold-color: #D4AF37;
+    --silver-color: #C0C0C0;
+    --text-color: #333;
+    --light-bg: #f5f9f8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', 'Open Sans', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* تنسيق الهيدر المتميز مع تأثيرات الذهب */
+header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(212, 175, 55, 0.08)" d="M0,0 L100,0 L100,100 L0,100 Z" /></svg>');
+    background-size: cover;
+    animation: pulse 15s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.08;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0.15;
+    }
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    color: var(--gold-color);
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1px;
+    animation: textGlow 3s infinite ease-in-out;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+    }
+
+    50% {
+        text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    }
+
+    100% {
+        text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+    }
+}
+
+header h1::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold-color), var(--silver-color));
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* تنسيق القائمة المتميزة مع تأثيرات الذهب */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgba(9, 38, 53, 0.8);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+nav ul li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+    transition: all 0.8s ease;
+}
+
+nav ul li a:hover {
+    color: white;
+    background: linear-gradient(135deg, var(--gold-color), var(--primary-light));
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+}
+
+nav ul li a:hover::before {
+    left: 100%;
+}
+
+/* تنسيق المحتوى الرئيسي مع تأثيرات إضافية */
+main {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    flex: 1;
+    position: relative;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(158, 200, 185, 0.05) 0%, rgba(9, 38, 53, 0.05) 70%);
+    z-index: -1;
+}
+
+.services-section {
+    text-align: center;
+    position: relative;
+}
+
+.services-section h2 {
+    color: var(--primary-dark);
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.services-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(to right, var(--gold-color), var(--primary-light));
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(158, 200, 185, 0.4);
+}
+
+.services-section p.subtitle {
+    color: var(--primary-medium);
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    line-height: 1.8;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    z-index: 1;
+    border-top: 4px solid transparent;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(92, 131, 116, 0.1), rgba(158, 200, 185, 0.1));
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border-top-color: var(--gold-color);
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-icon {
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-medium));
+    color: white;
+    font-size: 3rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+    background: linear-gradient(135deg, var(--primary-medium), var(--primary-dark));
+}
+
+.service-content {
+    padding: 2rem;
+    position: relative;
+}
+
+.service-content h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.service-content h3::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(to right, var(--gold-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+.service-content p {
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--gold-color), var(--accent-color));
+    color: var(--primary-dark);
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: all 0.6s ease;
+}
+
+.service-link:hover {
+    background: linear-gradient(135deg, var(--primary-medium), var(--primary-dark));
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(92, 131, 116, 0.6);
+}
+
+.service-link:hover::before {
+    left: 100%;
+}
+
+/* تأثيرات العوامات */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.floating-element {
+    position: absolute;
+    opacity: 0.1;
+    animation: floatAround 20s linear infinite;
+}
+
+@keyframes floatAround {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(50px, 50px) rotate(90deg);
+    }
+
+    50% {
+        transform: translate(100px, 0) rotate(180deg);
+    }
+
+    75% {
+        transform: translate(50px, -50px) rotate(270deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+/* تنسيق الفوتر المتميز مع تأثيرات الذهب */
+footer {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+    color: var(--accent-color);
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(212, 175, 55, 0.08)" d="M0,0 L100,0 L100,100 L0,100 Z" /></svg>');
+    background-size: cover;
+}
+
+footer p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2rem;
+}
+
+footer p::after {
+    content: "✦";
+    color: var(--gold-color);
+    margin: 0 0.5rem;
+}
+
+/* تأثيرات ظهور البطاقات */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.service-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.service-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.service-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.service-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* التصميم المتجاوب المتميز */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 0.8rem;
+        padding: 0.8rem;
+        border-radius: 20px;
+    }
+
+    nav ul li a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .services-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .services-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .service-content {
+        padding: 1.5rem;
+    }
+
+    .service-link {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
